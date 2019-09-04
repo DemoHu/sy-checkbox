@@ -2,16 +2,23 @@
  * @Author: Siwen
  * @Date: 2019-09-02 15:03:04
  * @LastEditors: Siwen
- * @LastEditTime: 2019-09-02 16:50:13
+ * @LastEditTime: 2019-09-04 11:05:16
  * @Description: 
  -->
 <template>
   <div class="table_checkbox">
-    <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">全选</el-checkbox>
-    <div style="margin: 15px 0;"></div>
-    <el-checkbox-group v-model="checkedOptions" @change="handlecheckedOptionsChange">
-      <el-checkbox v-for="item in options" :label="item" :key="item">{{ item }}</el-checkbox>
-    </el-checkbox-group>
+    <el-popover
+      :width="width"
+      :trigger="trigger"
+      :placement="placement"
+      popper-class="popper-checkbox">
+      <i class="el-icon-setting" slot="reference"></i>
+      <el-checkbox v-if="showCheckAll" :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">全选</el-checkbox>
+      <div style="margin: 15px 0;"></div>
+      <el-checkbox-group v-model="checkedOptions" @change="handlecheckedOptionsChange">
+        <el-checkbox v-for="item in options" :label="item" :key="item">{{ item }}</el-checkbox>
+      </el-checkbox-group>
+    </el-popover>
   </div>
 </template>
    
@@ -24,6 +31,22 @@ export default {
       default: () => {
         return []
       }
+    },
+    width: { //宽度
+      type: String,
+      default: '100'
+    },
+    trigger: { //触发方式
+      type: String,
+      default: 'click'
+    },
+    placement: { //显示的位置
+      type: String,
+      default: 'bottom-end'
+    },
+    showCheckAll: { //是否提供全选
+      type: Boolean,
+      default: false
     },
     isCheckAll: { //是否默认全选
       type: Boolean,
@@ -58,6 +81,23 @@ export default {
 </script>
 <style lang='scss'>
 .table_checkbox {
-
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  z-index: 10;
+  .el-icon-setting.el-popover__reference {
+    font-size: 20px;
+  }
+}
+.popper-checkbox {
+  min-width: 100px;
+  padding-right: 20px;
+  .el-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    .el-checkbox {
+      margin-bottom: 8px;
+    }
+  }
 }
 </style>
