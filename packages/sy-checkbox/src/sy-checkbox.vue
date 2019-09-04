@@ -2,7 +2,7 @@
  * @Author: Siwen
  * @Date: 2019-09-02 15:03:04
  * @LastEditors: Siwen
- * @LastEditTime: 2019-09-04 11:05:16
+ * @LastEditTime: 2019-09-04 11:31:55
  * @Description: 
  -->
 <template>
@@ -83,7 +83,6 @@ export default {
 .table_checkbox {
   position: absolute;
   right: 10px;
-  top: 15px;
   z-index: 10;
   .el-icon-setting.el-popover__reference {
     font-size: 20px;

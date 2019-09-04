@@ -2,7 +2,7 @@
  * @Author: Siwen
  * @Date: 2019-09-02 16:32:52
  * @LastEditors: Siwen
- * @LastEditTime: 2019-09-04 11:15:40
+ * @LastEditTime: 2019-09-04 11:32:17
  * @Description: 
  -->
 # sy-checkbox
@@ -15,6 +15,7 @@ npm install sy-checkbox -S
 
 // 在 main.js 引入并注册
 import syCheckbox from 'sy-checkbox'
+import 'sy-checkbox/lib/sy-checkbox.css'
 Vue.use(syCheckbox)
 ```
 ### 在组件中使用
