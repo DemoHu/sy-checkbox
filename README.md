@@ -2,7 +2,7 @@
  * @Author: Siwen
  * @Date: 2019-09-02 16:32:52
  * @LastEditors: Siwen
- * @LastEditTime: 2019-09-04 11:32:17
+ * @LastEditTime: 2019-09-04 11:42:47
  * @Description: 
  -->
 # sy-checkbox
@@ -95,7 +95,7 @@ export default {
 |参数名|必填|类型|说明|默认值|
 |:----|:---|:----- |:-----|:-----|
 |options|是|Array|选项数组|--|
-|width|否|String、Number|宽度|最小宽度 100px|
+|width|否|String、Number|宽度|最小宽度 120px|
 |show-check-all|否|Boolean|是否显示全选按钮|false|
 |is-check-all|否|Boolean|是否默认全选|true|
 |trigger|否|String|触发方式：click/focus/hover/manual|click|

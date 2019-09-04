@@ -2,7 +2,7 @@
  * @Author: Siwen
  * @Date: 2019-09-02 15:03:04
  * @LastEditors: Siwen
- * @LastEditTime: 2019-09-04 11:31:55
+ * @LastEditTime: 2019-09-04 11:42:41
  * @Description: 
  -->
 <template>
@@ -34,7 +34,7 @@ export default {
     },
     width: { //宽度
       type: String,
-      default: '100'
+      default: '120'
     },
     trigger: { //触发方式
       type: String,
@@ -89,7 +89,7 @@ export default {
   }
 }
 .popper-checkbox {
-  min-width: 100px;
+  min-width: 120px;
   padding-right: 20px;
   .el-checkbox-group {
     display: flex;
