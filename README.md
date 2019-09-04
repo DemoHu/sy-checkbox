@@ -2,7 +2,7 @@
  * @Author: Siwen
  * @Date: 2019-09-02 16:32:52
  * @LastEditors: Siwen
- * @LastEditTime: 2019-09-04 11:07:34
+ * @LastEditTime: 2019-09-04 11:15:40
  * @Description: 
  -->
 # sy-checkbox
@@ -98,7 +98,7 @@ export default {
 |show-check-all|否|Boolean|是否显示全选按钮|false|
 |is-check-all|否|Boolean|是否默认全选|true|
 |trigger|否|String|触发方式：click/focus/hover/manual|click|
-|placement|否|String|popper显示的位置：top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end|bottom|
+|placement|否|String|popper显示的位置：top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end|bottom-end|
 |change|是|Function|回调函数|已选项数组|
 
 
